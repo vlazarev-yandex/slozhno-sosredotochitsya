@@ -1,0 +1,20 @@
+/* fonts style */
+  
+  .font__paragraph {
+    color: #353430;
+    font-family: var(--font-family);
+    font-size: var(--font-main-size);
+    font-style: normal;
+    font-weight: var(--normal);
+    line-height: var(--line-height);
+  }
+  
+  .font__footer-title {
+    color: #FFC2E6;
+    text-shadow: 2px 2px 0px #FF8DCB;
+    font-family: var(--font-family);
+    font-size: var(--font-title-size);
+    font-style: normal;
+    font-weight: var(--bold);
+    line-height: var(--title-line-height);
+  }
