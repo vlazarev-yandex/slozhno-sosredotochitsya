@@ -1,25 +1,16 @@
 .decorated-zone {
   display: grid;
-  height: calc(100vh-1 * var(--page-padding));
+  height: calc(100vh);
 
   position: relative;
 
-  margin-block-end: var(--page-padding);
+  margin-block-end: calc(20px + 2 * var(--page-padding)); 
+  /* функция, которая даёт 80px при общестраничных паддингах=20px и 50px при общестраничных паддингах=10px */
 
   z-index: 0;
-}
 
-.decorated-zone::before {
-  content: "";
-  position: absolute;
-  left: calc(-1 * var(--page-padding));
-  top: calc(-1 * var(--page-padding));
-  width: calc(100% + 2 * var(--page-padding));
-  height: calc(100% + 2 * var(--page-padding));
-
-  background: var(--background-image) center no-repeat;
-  background-attachment: fixed;
-  z-index: -2;
+  --page-padding: var(--mobile-padding);
+  padding: var(--page-padding);
 }
 
 .block-start-inline-end-corner {

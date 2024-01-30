@@ -1,8 +1,8 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
+/* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
 .page {
-  --page-padding: var(--mobile-padding);
-
-  /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
-  padding: var(--page-padding);
+  background: var(--background-image) center no-repeat;
+  background-attachment: fixed;
+  z-index: -2;
 }
