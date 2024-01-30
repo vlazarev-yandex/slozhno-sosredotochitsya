@@ -32,8 +32,17 @@
 
 .content__link-accent {
     text-shadow: 2px 2px var(--accent-color);
-
     text-decoration: none;
+    border: 1px solid transparent;
+}
+
+.content__link-accent:hover {
+    border-block-end: 1px solid var(--text-color);
+}
+
+.content__link-accent:focus-visible {
+    outline: none;
+    border: 1px solid var(--text-color);
 }
 
 .content__text-block {
@@ -53,7 +62,7 @@
     padding: var(--page-padding);
 }
 
-@media (width > 572px) {
+@media (width > 500px) {
     .content__section-a {
         display: grid;
         grid-template-columns: 1fr 2fr;

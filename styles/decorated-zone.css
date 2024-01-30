@@ -85,7 +85,7 @@
   margin: var(--title-margin);
 }
 
-@media (572px < width <= 896px) {
+@media (500px < width <= 896px) {
   .header__title {
     --title-margin: var(--tablet-title-margin);
     margin: var(--title-margin);
