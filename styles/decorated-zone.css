@@ -22,7 +22,7 @@
   } 
 }
 
-.block-start-inline-end-corner {
+.header__block-start-inline-end-corner {
   width: 25px;
   height: 25px;
 
@@ -36,7 +36,7 @@
   position: relative;
 }
 
-.block-start-inline-end-corner::after {
+.header__block-start-inline-end-corner::after {
   content: "";
 
   background: var(--easter-egg-background) center no-repeat;
@@ -51,7 +51,7 @@
   z-index: -1;
 }
 
-.block-start-inline-end-corner::before {
+.header__block-start-inline-end-corner::before {
   content: "REC";
   width: 33px;
   height: 25px;
@@ -69,7 +69,7 @@
   left: -36px;
 }
 
-.block-end-inline-start-corner {
+.header__block-end-inline-start-corner {
   width: 25px;
   height: 25px;
   /* background: transparent; */
