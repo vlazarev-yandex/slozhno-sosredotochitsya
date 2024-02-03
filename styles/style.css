@@ -437,7 +437,7 @@
 @media (width > 500px) {
   .content__section-b {
     --page-padding: var(--general-padding);
-    padding: 0 calc(var(--page-padding) - 1px) 0 var(--page-padding);
+    padding: 0 var(--page-padding);
     --margin-block-end: var(--desktop-decorated-zone-margin-block-end);
     margin-block-end: calc(var(--page-padding) + var(--margin-block-end));
   }
