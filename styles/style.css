@@ -367,14 +367,21 @@
 .content__link-accent:focus-visible {
   outline: none;
   border: 1px solid var(--content__link-hover-color);
+} 
+
+.content__block {
+  padding: 0;
+  margin: 0;
+  height: fit-content;
+
+  display: grid;
+  gap: 20px;
 }
 
 .content__text-block {
   display: flex;
   flex-direction: column;
   gap: 10px;
-
-  margin-block-end: 20px;
 }
 
 .content__section-a {
@@ -417,6 +424,7 @@
 .content__text-block-gallery-b {
   display: grid;
   grid-template-rows: repeat(3, minmax(min-content, max-content));
+  gap: 20px;
 }
 
 @media (width > 500px) {
