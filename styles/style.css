@@ -192,6 +192,7 @@
 
   --title-margin: var(--mobile-title-margin);
   margin: var(--title-margin);
+  padding: 0;
 }
 
 @media (500px < width <= 896px) {
@@ -562,10 +563,13 @@
 
 @media (width > 500px) {
   footer {
-    --font-title-size: var(--font-title-size-desktop);
     --page-padding: var(--general-padding);
     padding: var(--page-padding);
     margin-block-start: var(--desktop-decorated-zone-margin-block-end);
+  }
+
+  .footer__title {
+    --font-title-size: var(--font-title-size-desktop);
   }
 }
 
