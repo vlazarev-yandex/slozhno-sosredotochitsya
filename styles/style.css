@@ -374,7 +374,7 @@
 .content__link-accent:focus-visible {
   outline: none;
   border: 1px solid var(--content__link-hover-color);
-} 
+}
 
 .content__block {
   padding: 0;
@@ -437,7 +437,7 @@
 @media (width > 500px) {
   .content__section-b {
     --page-padding: var(--general-padding);
-    padding: 0 var(--page-padding);
+    padding: 0 calc(var(--page-padding) - 1px) 0 var(--page-padding);
     --margin-block-end: var(--desktop-decorated-zone-margin-block-end);
     margin-block-end: calc(var(--page-padding) + var(--margin-block-end));
   }
@@ -447,7 +447,7 @@
   .content__text-block-gallery-b {
     display: grid;
     grid-template-rows: 1fr;
-    grid-template-columns: repeat(3, minmax(min-content, max-content));
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
   }
 }
