@@ -42,7 +42,7 @@
   --mobile-theme-switcher-margin: 40px 0 0 0;
   --mobile-title-margin: 65px 0 55px 0;
   --mobile-subtitle-margin-block-end: 31px;
-  --mobile-decorated-zone-margin-block-end: 50px;
+  --mobile-decorated-zone-margin-block-end: 40px;
 
   /* tablet specifics */
   --tablet-theme-switcher-margin: 147px 0 0 0;
@@ -54,5 +54,5 @@
   --desktop-theme-switcher-margin: 0;
   --desktop-title-margin: 273px 0 114px 0;
   --desktop-subtitle-margin-block-end: 89px;
-  --desktop-decorated-zone-margin-block-end: 80px;
+  --desktop-decorated-zone-margin-block-end: 60px;
 }
