@@ -196,6 +196,7 @@
 
 @media (500px < width <= 896px) {
   .header__title {
+    --font-title-size: var(--font-title-size-desktop);
     --title-margin: var(--tablet-title-margin);
     margin: var(--title-margin);
   }
@@ -203,6 +204,7 @@
 
 @media (width > 896px) {
   .header__title {
+    --font-title-size: var(--font-title-size-desktop);
     --title-margin: var(--desktop-title-margin);
     margin: var(--title-margin);
   }
@@ -560,6 +562,7 @@
 
 @media (width > 500px) {
   footer {
+    --font-title-size: var(--font-title-size-desktop);
     --page-padding: var(--general-padding);
     padding: var(--page-padding);
     margin-block-start: var(--desktop-decorated-zone-margin-block-end);
