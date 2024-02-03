@@ -4,44 +4,47 @@
   переключая тему
 */
 
-:root {
-  --text-color-light: #353430; 
-  --background-color-light: #FFF1F7;
-  --accent-color-light: #FF8DCB;
-  --accent-color-2-light: #FFC2E6;
-
-  --background-image-light: url("../images/cover-image-light.png"); 
-
-  --easter-egg-background-light: transparent;
-  --easter-egg-font-light: transparent;
-
-  --button-hover-color-light: rgba(50, 49, 45, 0.40);
-  --button-active-color-light: var(--text-color-light);
-
-  --decorate-border-color-light: var(--text-color-light);
-  --theme-switcher-color: var(--text-color-light);
-}
-
 .page.theme_light {
   /* сохраните этот селектор в приведённом виде.
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
 
-  --text-color: var(--text-color-light); 
+  /* general */
   --background-color: var(--background-color-light);
-  --accent-color: var(--accent-color-light);
-  --accent-color-2: var(--accent-color-2-light);
-
-  --header-text-color: var(--text-color);
-
   --background-image: var(--background-image-light); 
 
-  --easter-egg-background: var(--easter-egg-background-light);
-  --easter-egg-font: var(--easter-egg-font-light);
+  --main-color: var(--main-color-light);
+  --background-color: var(--background-color-light);
+  --accent-color: var(--accent-color-light);
+  --secondary-color: var(--secondary-color-light);
 
-  --button-hover-color: var(--button-hover-color-light);
-  --button-active-color: var(--button-active-color-light);
+/* decorated-zone */
+  /* decoration-corners */
+    --decorate-border-color: var(--main-color);
+  
+  /* switcher */
+    --theme-switcher-color: var(--main-color);
+    --button-hover-color: var(--button-hover-color-light);
+    --button-active-color: var(--main-color);
 
-  --decorate-border-color: var(--decorate-border-color-light);
+  /* header-title */
+    --header__title-color: var(--secondary-color); 
+    --header__title-shadow-color: var(--accent-color);
+  
+  /* header-subtitle */
+    --header__subtitle-background-color: var(--accent-color);
+    --header__subtitle-color: var(--main-color);
+
+  /* REC */
+    --easter-egg-background: var(--easter-egg-background-light);
+    --easter-egg-font: transparent;
+
+/* content */
+  --content__title-color: var(--main-color);
+  --content__subtitle-color: var(--main-color);
+  --content__substitle-background-color: var(--accent-color);
+  --content__text-color: var(--main-color); 
+  --content__link-color: var(--accent-color); 
+  --content__link-hover-color: var(--main-color); 
 }

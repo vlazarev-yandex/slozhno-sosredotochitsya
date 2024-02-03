@@ -39,7 +39,7 @@
 .block-start-inline-end-corner::after {
   content: "";
 
-  background: var(--easter-egg-background);
+  background: var(--easter-egg-background) center no-repeat;
   border: none;
   width: 25px;
   height: 25px;
@@ -82,8 +82,8 @@
 .header__title {
   --font-title-size: var(--font-title-size-mobile);
 
-  color: var(--accent-color-2);
-  text-shadow: 4px 4px 0px var(--title-shadow-color);
+  color: var(--header__title-color);
+  text-shadow: 4px 4px 0px var(--header__title-shadow-color);
   font-family: var(--font-family);
   font-size: var(--font-title-size);
   font-style: normal;
@@ -109,8 +109,8 @@
 }
 
 .header__subtitle {
-  background-color: var(--accent-color);
-  color: var(--title-text-color);
+  background-color: var(--header__subtitle-background-color);
+  color: var(--header__subtitle-color);
   font-family: var(--font-family);
   font-size: var(--font-main-size);
   font-style: normal;

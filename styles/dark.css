@@ -3,45 +3,47 @@
   здесь окажутся стили, которые нужно переопределить принудительно,
   переключая тему
 */
-
-:root {
-  --text-color-dark: #F1B2CE; 
-  --background-color-dark: #000028;
-  --accent-color-dark: #FF0070;
-  --accent-color-2-dark: #DB00FF;
-
-  --background-image-dark: url("../images/cover-image-dark.png"); 
-
-  --easter-egg-background-dark: url("../images/Ellipse\ 4.png") center no-repeat;
-  --easter-egg-font-dark: var(--accent-color-dark);
-
-  --button-hover-color-dark: rgba(255, 0, 112, 0.40);
-  --button-active-color-dark: var(--accent-color-dark);
-
-  --decorate-border-color-dark: var(--accent-color-dark);
-}
-
 .page.theme_dark {
   /* сохраните этот селектор в приведённом виде.
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
 
-  --text-color: var(--text-color-dark); 
-  --background-color: var(--background-color-dark);
-  --accent-color: var(--accent-color-dark);
-  --accent-color-2: var(--accent-color-2-dark);
+  /* general */
+    --background-color: var(--background-color-dark);
+    --background-image: var(--background-image-dark); 
 
-  --title-text-color: var(--background-color-dark);
+    --main-color: var(--main-color-dark);
+    --background-color: var(--background-color-dark);
+    --accent-color: var(--accent-color-dark);
+    --secondary-color: var(--secondary-color-dark);
 
-  --background-image: var(--background-image-dark); 
+  /* decorated-zone */
+    /* decoration-corners */
+      --decorate-border-color: var(--accent-color);
+    
+    /* switcher */
+      --theme-switcher-color: var(--accent-color);
+      --button-hover-color: var(--button-hover-color-dark);
+      --button-active-color: var(--accent-color);
 
-  --easter-egg-background: var(--easter-egg-background-dark);
-  --easter-egg-font: var(--easter-egg-font-dark);
+    /* header-title */
+      --header__title-color: var(--secondary-color); 
+      --header__title-shadow-color: var(--accent-color);
+    
+    /* header-subtitle */
+      --header__subtitle-background-color: var(--accent-color);
+      --header__subtitle-color: var(--background-color);
 
-  --button-hover-color: var(--button-hover-color-dark);
-  --button-active-color: var(--button-active-color-dark);
-  --theme-switcher-color: var(--accent-color-dark);
+    /* REC */
+      --easter-egg-background: var(--easter-egg-background-dark);
+      --easter-egg-font: var(--accent-color);
 
-  --decorate-border-color: var(--decorate-border-color-dark);
+  /* content */
+    --content__title-color: var(--accent-color);
+    --content__subtitle-color: var(--background-color);
+    --content__substitle-background-color: var(--accent-color);
+    --content__text-color: var(--main-color); 
+    --content__link-color: var(--accent-color); 
+    --content__link-hover-color: var(--main-color); 
 }

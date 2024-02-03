@@ -10,44 +10,86 @@
 
 @media (prefers-color-scheme: dark) {
   .page.theme_auto {
-    --text-color: /var(--text-color-dark);
-    --background-color: var(--background-color-dark);
-    --accent-color: var(--accent-color-dark);
-    --accent-color-2: var(--accent-color-2-dark);
 
-    --header-text-color: var(--background-color-dark);
-
-    --background-image: var(--background-image-dark); 
-
-    --easter-egg-background: var(--easter-egg-background-dark);
-    --easter-egg-font: var(--easter-egg-font-dark);
-
-    --button-hover-color: var(--button-hover-color-dark);
-    --button-active-color: var(--button-active-color-dark);
-    --theme-switcher-color: var(--accent-color-dark);
-
-    --decorate-border-color: var(--decorate-border-color-dark);
-  }
+      /* general */
+        --background-color: var(--background-color-dark);
+        --background-image: var(--background-image-dark); 
+    
+        --main-color: var(--main-color-dark);
+        --background-color: var(--background-color-dark);
+        --accent-color: var(--accent-color-dark);
+        --secondary-color: var(--secondary-color-dark);
+    
+      /* decorated-zone */
+        /* decoration-corners */
+          --decorate-border-color: var(--accent-color);
+        
+        /* switcher */
+          --theme-switcher-color: var(--accent-color);
+          --button-hover-color: var(--button-hover-color-dark);
+          --button-active-color: var(--accent-color);
+    
+        /* header-title */
+          --header__title-color: var(--secondary-color); 
+          --header__title-shadow-color: var(--accent-color);
+        
+        /* header-subtitle */
+          --header__subtitle-background-color: var(--accent-color);
+          --header__subtitle-color: var(--background-color);
+    
+        /* REC */
+          --easter-egg-background: var(--easter-egg-background-dark);
+          --easter-egg-font: var(--accent-color);
+    
+      /* content */
+        --content__title-color: var(--accent-color);
+        --content__subtitle-color: var(--background-color);
+        --content__substitle-background-color: var(--accent-color);
+        --content__text-color: var(--main-color); 
+        --content__link-color: var(--accent-color); 
+        --content__link-hover-color: var(--main-color); 
+    }
 }
 
 @media (prefers-color-scheme: light) {
   .page.theme_auto {
+
+      /* general */
+      --background-color: var(--background-color-light);
+      --background-image: var(--background-image-light); 
     
-    --text-color: var(--text-color-light); 
-    --background-color: var(--background-color-light);
-    --accent-color: var(--accent-color-light);
-    --accent-color-2: var(--accent-color-2-light);
-
-    --header-text-color: var(--text-color);
-
-    --background-image: var(--background-image-light); 
-
-    --easter-egg-background: var(--easter-egg-background-light);
-    --easter-egg-font: var(--easter-egg-font-light);
-
-    --button-hover-color: var(--button-hover-color-light);
-    --button-active-color: var(--button-active-color-light);
-
-    --decorate-border-color: var(--decorate-border-color-light);
-  }
+      --main-color: var(--main-color-light);
+      --background-color: var(--background-color-light);
+      --accent-color: var(--accent-color-light);
+      --secondary-color: var(--secondary-color-light);
+    
+    /* decorated-zone */
+      /* decoration-corners */
+        --decorate-border-color: var(--main-color);
+      
+      /* switcher */
+        --theme-switcher-color: var(--main-color);
+        --button-hover-color: var(--button-hover-color-light);
+        --button-active-color: var(--main-color);
+    
+      /* header-title */
+        --header__title-color: var(--secondary-color); 
+        --header__title-shadow-color: var(--accent-color);
+      
+      /* header-subtitle */
+        --header__subtitle-background-color: var(--accent-color);
+        --header__subtitle-color: var(--main-color);
+    
+      /* REC */
+        --easter-egg-background: var(--easter-egg-background-light);
+        --easter-egg-font: transparent;
+    
+    /* content */
+      --content__title-color: var(--main-color);
+      --content__subtitle-color: var(--main-color);
+      --content__substitle-background-color: var(--accent-color);
+      --content__text-color: var(--main-color); 
+      --content__link-color: var(--accent-color); 
+      --content__link-hover-color: var(--main-color); 
+    }
 }

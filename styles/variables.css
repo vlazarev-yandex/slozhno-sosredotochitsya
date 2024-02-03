@@ -6,59 +6,50 @@
 /* color-scheme theme:light */
 :root {
   /* ---------------------------------------- */
-  /* general variables */
-  --text-color: var(--text-color-light); 
-  --background-color: var(--background-color-light);
-  --accent-color: var(--accent-color-light);
-  --accent-color-2: var(--accent-color-2-light);
+  /* general */
+    --font-family: 'IBM Plex Mono', Arial, sans-serif; 
+    --font-title-size-mobile: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem); 
+    --font-title-size-desktop: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem); 
+    --font-main-size: 18px; 
+    --normal: 400; 
+    --bold: 700; 
+    --line-height: 23.4px; /* 130% */
+    --selector-line-height: 18px; 
+    --title-line-height: 95.7px; /* 82.5% */
+    
+    --general-padding: 20px; 
 
-  --header-text-color: var(--text-color);
+  /* dark theme specifics */
+    --main-color-dark: #F1B2CE; 
+    --background-color-dark: #000028;
+    --accent-color-dark: #FF0070;
+    --secondary-color-dark: #DB00FF;
+    --background-image-dark: url("../images/cover-image-dark.png"); 
+    --easter-egg-background-dark: url("../images/Ellipse\ 4.png");
+    --button-hover-color-dark: rgba(255, 0, 112, 0.40);
 
-  --font-family: 'IBM Plex Mono', Arial, sans-serif; 
+  /* light theme specifics */
+    --main-color-light: #353430; 
+    --background-color-light: #FFF1F7;
+    --accent-color-light: #FF8DCB;
+    --secondary-color-light: #FFC2E6;
+    --background-image-light: url("../images/cover-image-light.png"); 
+    --easter-egg-background-light: transparent;
+    --button-hover-color-light: rgba(50, 49, 45, 0.40);
 
-  --font-title-size-mobile: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem); 
-  --font-title-size-desktop: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem); 
-  --font-main-size: 18px; 
-
-  --normal: 400; 
-  --bold: 700; 
-
-  --line-height: 23.4px; /* 130% */
-  --selector-line-height: 18px; 
-  --title-line-height: 95.7px; /* 82.5% */
-
-  --mobile-padding: 10px;
-  --general-padding: 20px; 
-
-  --page-padding: var(--mobile-padding);
-  --background-image: var(--background-image-light); 
-
-  /* ---------------------------------------- */
-  /* header variables */
-
-
-
-  --title-shadow-color: #FF0070;
-
-  --mobile-theme-switcher-margin: 40px 0 0 0;
-  --mobile-title-margin: 65px 0 55px 0;
-  --mobile-subtitle-margin-block-end: 31px;
+  /* mobile specifics */
+    --mobile-padding: 10px;
+    --mobile-theme-switcher-margin: 40px 0 0 0;
+    --mobile-title-margin: 65px 0 55px 0;
+    --mobile-subtitle-margin-block-end: 31px;
   
-  --tablet-theme-switcher-margin: 147px 0 0 0;
-  --tablet-title-margin: 173px 0 162px 0;
-  --tablet-subtitle-margin-block-end: 138px;
+  /* tablet specifics */
+    --tablet-theme-switcher-margin: 147px 0 0 0;
+    --tablet-title-margin: 173px 0 162px 0;
+    --tablet-subtitle-margin-block-end: 138px;
   
-  --desktop-theme-switcher-margin: 0;
-  --desktop-title-margin: 273px 0 114px 0;
-  --desktop-subtitle-margin-block-end: 89px;
-
-  /* ---------------------------------------- */
-  /* header easter egg variables */
-  --easter-egg-background: var(--easter-egg-background-light);
-  --easter-egg-font: var(--easter-egg-font-light);
-
-  --button-active-color: var(--button-active-color-light);
-  --button-hover-color: var(--button-hover-color-light);
-
-  --decorate-border-color: var(--decorate-border-color-light);
+  /* desktop specifics */
+    --desktop-theme-switcher-margin: 0;
+    --desktop-title-margin: 273px 0 114px 0;
+    --desktop-subtitle-margin-block-end: 89px;
 }
