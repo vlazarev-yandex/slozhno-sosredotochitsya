@@ -99,7 +99,8 @@
 
   position: relative;
 
-  margin-block-end: calc(20px + 2 * var(--page-padding));
+  --decorated-zone-margin-block-end: var(--mobile-decorated-zone-margin-block-end);
+  margin-block-end: var(--decorated-zone-margin-block-end); 
   /* функция, которая даёт 80px при общестраничных паддингах=20px и 50px при общестраничных паддингах=10px */
 
   z-index: 0;
@@ -112,7 +113,8 @@
   .decorated-zone {
     --page-padding: var(--general-padding);
     padding: var(--page-padding);
-    margin-block-end: calc(20px + 2 * var(--page-padding));
+    --decorated-zone-margin-block-end: var(--desktop-decorated-zone-margin-block-end);
+    margin-block-end: var(--decorated-zone-margin-block-end); 
   }
 }
 
@@ -405,7 +407,7 @@
   grid-template-rows: repeat(3, minmax(min-content, max-content));
 }
 
-@media (width > 500) {
+@media (width > 500px) {
   .content__section-b {
     --page-padding: var(--general-padding);
     padding: var(--page-padding);
