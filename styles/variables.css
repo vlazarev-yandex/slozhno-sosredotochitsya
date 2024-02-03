@@ -12,6 +12,8 @@
   --accent-color: var(--accent-color-light);
   --accent-color-2: var(--accent-color-2-light);
 
+  --header-text-color: var(--text-color);
+
   --font-family: 'IBM Plex Mono', Arial, sans-serif; 
 
   --font-title-size-mobile: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem); 
@@ -28,6 +30,7 @@
   --mobile-padding: 10px;
   --general-padding: 20px; 
 
+  --page-padding: var(--mobile-padding);
   --background-image: var(--background-image-light); 
 
   /* ---------------------------------------- */

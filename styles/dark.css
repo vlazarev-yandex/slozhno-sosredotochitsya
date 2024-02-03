@@ -31,13 +31,16 @@
   --background-color: var(--background-color-dark);
   --accent-color: var(--accent-color-dark);
   --accent-color-2: var(--accent-color-2-dark);
-  --background-image: var(--background-image-dark); 
 
-  --button-hover-color: var(--button-hover-color-dark);
-  --button-active-color: var(--button-active-color-dark);
+  --header-text-color: var(--background-color-dark);
+
+  --background-image: var(--background-image-dark); 
 
   --easter-egg-background: var(--easter-egg-background-dark);
   --easter-egg-font: var(--easter-egg-font-dark);
+
+  --button-hover-color: var(--button-hover-color-dark);
+  --button-active-color: var(--button-active-color-dark);
   --theme-switcher-color: var(--accent-color-dark);
 
   --decorate-border-color: var(--decorate-border-color-dark);

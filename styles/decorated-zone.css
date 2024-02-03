@@ -13,6 +13,15 @@
   padding: var(--page-padding);
 }
 
+@media (width > 500px) {
+  .decorated-zone {
+
+    --page-padding: var(--general-padding);
+    padding: var(--page-padding);
+    margin-block-end: calc(20px + 2 * var(--page-padding)); 
+  } 
+}
+
 .block-start-inline-end-corner {
   width: 25px;
   height: 25px;
@@ -101,7 +110,7 @@
 
 .header__subtitle {
   background-color: var(--accent-color);
-  color: var(--text-color);
+  color: var(--header-text-color);
   font-family: var(--font-family);
   font-size: var(--font-main-size);
   font-style: normal;
@@ -148,7 +157,9 @@
     margin: var(--theme-switcher-margin);
 
     position: absolute;
-    top: 0;
+  
+    --page-padding: var(--general-padding);
+    top: var(--page-padding);
     left: 50%;
     transform: translateX(-50%);
   }

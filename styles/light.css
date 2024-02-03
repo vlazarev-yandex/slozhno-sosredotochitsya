@@ -19,6 +19,7 @@
   --button-active-color-light: var(--text-color-light);
 
   --decorate-border-color-light: var(--text-color-light);
+  --theme-switcher-color: var(--text-color-light);
 }
 
 .page.theme_light {
@@ -27,6 +28,20 @@
     чем стили в медиазапросе предпочтений пользователя
   */
 
-  --theme-switcher-color: var(--text-color-light);
+  --text-color: var(--text-color-light); 
+  --background-color: var(--background-color-light);
+  --accent-color: var(--accent-color-light);
+  --accent-color-2: var(--accent-color-2-light);
 
+  --header-text-color: var(--text-color);
+
+  --background-image: var(--background-image-light); 
+
+  --easter-egg-background: var(--easter-egg-background-light);
+  --easter-egg-font: var(--easter-egg-font-light);
+
+  --button-hover-color: var(--button-hover-color-light);
+  --button-active-color: var(--button-active-color-light);
+
+  --decorate-border-color: var(--decorate-border-color-light);
 }
