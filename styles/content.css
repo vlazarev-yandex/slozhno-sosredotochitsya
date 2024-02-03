@@ -1,5 +1,5 @@
 .content__title {
-    color: var(--text-color);
+    color: var(--title-text-color);
     font-family: var(--font-family);
     font-size: var(--font-main-size);
     font-style: normal;
@@ -10,7 +10,7 @@
 }
 
 .content__subtitle {
-    color: var(--text-color);
+    color: var(--title-text-color);
     font-family: var(--font-family);
     font-size: var(--font-main-size);
     font-style: normal;
