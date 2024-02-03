@@ -12,39 +12,39 @@
 
   /* general */
   --background-color: var(--background-color-light);
-  --background-image: var(--background-image-light); 
+  --background-image: var(--background-image-light);
 
   --main-color: var(--main-color-light);
   --background-color: var(--background-color-light);
   --accent-color: var(--accent-color-light);
   --secondary-color: var(--secondary-color-light);
 
-/* decorated-zone */
+  /* decorated-zone */
   /* decoration-corners */
-    --decorate-border-color: var(--main-color);
-  
+  --decorate-border-color: var(--main-color);
+
   /* switcher */
-    --theme-switcher-color: var(--main-color);
-    --button-hover-color: var(--button-hover-color-light);
-    --button-active-color: var(--main-color);
+  --theme-switcher-color: var(--main-color);
+  --button-hover-color: var(--button-hover-color-light);
+  --button-active-color: var(--main-color);
 
   /* header-title */
-    --header__title-color: var(--secondary-color); 
-    --header__title-shadow-color: var(--accent-color);
-  
+  --header__title-color: var(--secondary-color);
+  --header__title-shadow-color: var(--accent-color);
+
   /* header-subtitle */
-    --header__subtitle-background-color: var(--accent-color);
-    --header__subtitle-color: var(--main-color);
+  --header__subtitle-background-color: var(--accent-color);
+  --header__subtitle-color: var(--main-color);
 
   /* REC */
-    --easter-egg-background: var(--easter-egg-background-light);
-    --easter-egg-font: transparent;
+  --easter-egg-background: var(--easter-egg-background-light);
+  --easter-egg-font: transparent;
 
-/* content */
+  /* content */
   --content__title-color: var(--main-color);
   --content__subtitle-color: var(--main-color);
   --content__substitle-background-color: var(--accent-color);
-  --content__text-color: var(--main-color); 
-  --content__link-color: var(--accent-color); 
-  --content__link-hover-color: var(--main-color); 
+  --content__text-color: var(--main-color);
+  --content__link-color: var(--accent-color);
+  --content__link-hover-color: var(--main-color);
 }

@@ -10,40 +10,40 @@
   */
 
   /* general */
-    --background-color: var(--background-color-dark);
-    --background-image: var(--background-image-dark); 
+  --background-color: var(--background-color-dark);
+  --background-image: var(--background-image-dark);
 
-    --main-color: var(--main-color-dark);
-    --background-color: var(--background-color-dark);
-    --accent-color: var(--accent-color-dark);
-    --secondary-color: var(--secondary-color-dark);
+  --main-color: var(--main-color-dark);
+  --background-color: var(--background-color-dark);
+  --accent-color: var(--accent-color-dark);
+  --secondary-color: var(--secondary-color-dark);
 
   /* decorated-zone */
-    /* decoration-corners */
-      --decorate-border-color: var(--accent-color);
-    
-    /* switcher */
-      --theme-switcher-color: var(--accent-color);
-      --button-hover-color: var(--button-hover-color-dark);
-      --button-active-color: var(--accent-color);
+  /* decoration-corners */
+  --decorate-border-color: var(--accent-color);
 
-    /* header-title */
-      --header__title-color: var(--secondary-color); 
-      --header__title-shadow-color: var(--accent-color);
-    
-    /* header-subtitle */
-      --header__subtitle-background-color: var(--accent-color);
-      --header__subtitle-color: var(--background-color);
+  /* switcher */
+  --theme-switcher-color: var(--accent-color);
+  --button-hover-color: var(--button-hover-color-dark);
+  --button-active-color: var(--accent-color);
 
-    /* REC */
-      --easter-egg-background: var(--easter-egg-background-dark);
-      --easter-egg-font: var(--accent-color);
+  /* header-title */
+  --header__title-color: var(--secondary-color);
+  --header__title-shadow-color: var(--accent-color);
+
+  /* header-subtitle */
+  --header__subtitle-background-color: var(--accent-color);
+  --header__subtitle-color: var(--background-color);
+
+  /* REC */
+  --easter-egg-background: var(--easter-egg-background-dark);
+  --easter-egg-font: var(--accent-color);
 
   /* content */
-    --content__title-color: var(--accent-color);
-    --content__subtitle-color: var(--background-color);
-    --content__substitle-background-color: var(--accent-color);
-    --content__text-color: var(--main-color); 
-    --content__link-color: var(--accent-color); 
-    --content__link-hover-color: var(--main-color); 
+  --content__title-color: var(--accent-color);
+  --content__subtitle-color: var(--background-color);
+  --content__substitle-background-color: var(--accent-color);
+  --content__text-color: var(--main-color);
+  --content__link-color: var(--accent-color);
+  --content__link-hover-color: var(--main-color);
 }
