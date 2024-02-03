@@ -312,9 +312,7 @@
 }
 
 .header__theme-menu-button:focus-visible {
-  border: none;
   outline: none;
-
   border: 1px transparent solid;
   border-block-end: 1px solid var(--theme-switcher-color);
 }
