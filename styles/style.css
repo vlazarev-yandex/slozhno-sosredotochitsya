@@ -198,6 +198,8 @@
 @media (500px < width <= 896px) {
   .header__title {
     --font-title-size: var(--font-title-size-desktop);
+    font-size: var(--font-title-size);
+
     --title-margin: var(--tablet-title-margin);
     margin: var(--title-margin);
   }
@@ -206,6 +208,8 @@
 @media (width > 896px) {
   .header__title {
     --font-title-size: var(--font-title-size-desktop);
+    font-size: var(--font-title-size);
+
     --title-margin: var(--desktop-title-margin);
     margin: var(--title-margin);
   }
@@ -570,6 +574,7 @@
 
   .footer__title {
     --font-title-size: var(--font-title-size-desktop);
+    font-size: var(--font-title-size);
   }
 }
 
