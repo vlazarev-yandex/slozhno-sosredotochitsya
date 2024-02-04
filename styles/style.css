@@ -170,12 +170,10 @@
   cursor: pointer;
 }
 
-.header__theme-menu-button_active{
+.header__theme-menu-button_active {
   border: 1px solid var(--button-active-color);
   background: transparent;
   transition: border-color 0.5s;
-}
-.header__theme-menu-button_active {
   pointer-events: none;
 }
 
