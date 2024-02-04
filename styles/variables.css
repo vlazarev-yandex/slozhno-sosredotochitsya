@@ -8,16 +8,12 @@
   /* ---------------------------------------- */
   /* general */
   --font-family: "IBM Plex Mono", Arial, sans-serif;
-  --font-title-size-mobile: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-  --font-title-size-desktop: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   --font-main-size: 18px;
   --normal: 400;
   --bold: 700;
   --line-height: 23.4px; /* 130% */
   --selector-line-height: 18px;
   --title-line-height: 95.7px; /* 82.5% */
-
-  --general-padding: 20px;
 
   /* dark theme specifics */
   --main-color-dark: #f1b2ce;
@@ -38,21 +34,16 @@
   --button-hover-color-light: rgba(50, 49, 45, 0.4);
 
   /* mobile specifics */
-  --mobile-padding: 10px;
-  --mobile-theme-switcher-margin: 40px 0 0 0;
-  --mobile-title-margin: 65px 0 55px 0;
-  --mobile-subtitle-margin-block-end: 31px;
-  --mobile-decorated-zone-margin-block-end: 40px;
+  --font-title-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  --page-padding: 10px;
+  --decorated-zone__margin-block-end: 40px;
+}
 
-  /* tablet specifics */
-  --tablet-theme-switcher-margin: 147px 0 0 0;
-  --tablet-title-margin: 173px 0 162px -20px;
-  --tablet-subtitle-margin-block-end: 138px;
-  /* --tablet-decorated-zone-margin-block-end: 80px; */ /* переменная не применяется */
-
-  /* desktop specifics */
-  --desktop-theme-switcher-margin: 0;
-  --desktop-title-margin: 274.5px 0 114px -20px;
-  --desktop-subtitle-margin-block-end: 89px;
-  --desktop-decorated-zone-margin-block-end: 60px;
+@media (width >= 500px) {
+  /* desktop/tablet specifics */
+  :root {
+    --font-title-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    --page-padding: 20px;
+    --decorated-zone__margin-block-end: 60px;
+  }
 }

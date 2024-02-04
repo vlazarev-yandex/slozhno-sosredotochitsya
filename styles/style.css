@@ -6,119 +6,92 @@
   background-attachment: fixed;
   background-size: cover;
   z-index: -2;
-}
 
-@media (prefers-color-scheme: dark) {
-  .page.theme_auto {
-    /* general */
-    --background-color: var(--background-color-dark);
-    --background-image: var(--background-image-dark);
-
-    --main-color: var(--main-color-dark);
-    --background-color: var(--background-color-dark);
-    --accent-color: var(--accent-color-dark);
-    --secondary-color: var(--secondary-color-dark);
-
-    /* decorated-zone */
-    /* decoration-corners */
-    --decorate-border-color: var(--accent-color);
-
-    /* switcher */
-    --theme-switcher-color: var(--accent-color);
-    --button-hover-color: var(--button-hover-color-dark);
-    --button-active-color: var(--accent-color);
-
-    /* header-title */
-    --header__title-color: var(--secondary-color);
-    --header__title-shadow-color: var(--accent-color);
-
-    /* header-subtitle */
-    --header__subtitle-background-color: var(--accent-color);
-    --header__subtitle-color: var(--background-color);
-
-    /* REC */
-    --easter-egg-background: var(--easter-egg-background-dark);
-    --easter-egg-font: var(--accent-color);
-
-    /* content */
-    --content__title-color: var(--accent-color);
-    --content__subtitle-color: var(--background-color);
-    --content__substitle-background-color: var(--accent-color);
-    --content__text-color: var(--main-color);
-    --content__link-color: var(--accent-color);
-    --content__link-hover-color: var(--main-color);
-  }
-}
-
-@media (prefers-color-scheme: light) {
-  .page.theme_auto {
-    /* general */
-    --background-color: var(--background-color-light);
-    --background-image: var(--background-image-light);
-
-    --main-color: var(--main-color-light);
-    --background-color: var(--background-color-light);
-    --accent-color: var(--accent-color-light);
-    --secondary-color: var(--secondary-color-light);
-
-    /* decorated-zone */
-    /* decoration-corners */
-    --decorate-border-color: var(--main-color);
-
-    /* switcher */
-    --theme-switcher-color: var(--main-color);
-    --button-hover-color: var(--button-hover-color-light);
-    --button-active-color: var(--main-color);
-
-    /* header-title */
-    --header__title-color: var(--secondary-color);
-    --header__title-shadow-color: var(--accent-color);
-
-    /* header-subtitle */
-    --header__subtitle-background-color: var(--accent-color);
-    --header__subtitle-color: var(--main-color);
-
-    /* REC */
-    --easter-egg-background: var(--easter-egg-background-light);
-    --easter-egg-font: transparent;
-
-    /* content */
-    --content__title-color: var(--main-color);
-    --content__subtitle-color: var(--main-color);
-    --content__substitle-background-color: var(--accent-color);
-    --content__text-color: var(--main-color);
-    --content__link-color: var(--accent-color);
-    --content__link-hover-color: var(--main-color);
-  }
+  background-color: var(--background-color);
 }
 
 /* header = decorated-zone */
 .decorated-zone {
   display: grid;
-  height: calc(100vh);
+  grid-template-rows: 1fr min-content 1fr;
 
-  position: relative;
+  height: 100vh;
+  min-height: 668px;
 
-  --decorated-zone-margin-block-end: var(
-    --mobile-decorated-zone-margin-block-end
-  );
-  margin-block-end: var(--decorated-zone-margin-block-end);
+  margin-block-end: var(--decorated-zone__margin-block-end);
   /* функция, которая даёт 80px при общестраничных паддингах=20px и 50px при общестраничных паддингах=10px */
 
   z-index: 0;
 
-  --page-padding: var(--mobile-padding);
   padding: var(--page-padding);
+  position: relative;
+}
+
+.header__REC-easter-egg {
+  position: absolute;
+  top: var(--page-padding);
+  right: var(--page-padding);
+  border: 1px solid transparent;
+  display: inline-block;
+  height: 25px;
+  width: fit-content;
+  display: flex;
+}
+
+.header__REC-easter-egg::before {
+  content: "rec";
+
+  color: var(--easter-egg-font);
+  font-family: var(--font-family);
+  font-size: var(--font-main-size);
+  font-style: normal;
+  font-weight: var(--normal);
+  line-height: 25px;
+  text-transform: uppercase;
+  align-self: center;
+}
+
+.header__REC-svg {
+  height: 25px;
+  width: 25px;
+  align-self: center;
+  transform: scale(var(--easter-egg-visible));
+}
+
+.decorated-zone::before {
+  content: "";
+
+  height: 25px;
+  aspect-ratio: 1;
+  background: transparent;
+  border: 1px transparent;
+  border-block-start: 1px solid var(--decorate-border-color);
+  border-inline-end: 1px solid var(--decorate-border-color);
+
+  position: absolute;
+  top: var(--page-padding);
+  right: var(--page-padding);
+}
+
+.decorated-zone::after {
+  content: "";
+
+  height: 25px;
+  aspect-ratio: 1;
+  background: transparent;
+  border: 1px transparent;
+  border-inline-start: 1px solid var(--decorate-border-color);
+  border-block-end: 1px solid var(--decorate-border-color);
+
+  position: absolute;
+  left: var(--page-padding);
+  bottom: var(--page-padding);
 }
 
 @media (width > 500px) {
   .decorated-zone {
-    --page-padding: var(--general-padding);
     padding: var(--page-padding);
-    --decorated-zone-margin-block-end: var(
-      --desktop-decorated-zone-margin-block-end
-    );
-    margin-block-end: var(--decorated-zone-margin-block-end);
+    margin-block-end: var(--decorated-zone__margin-block-end);
   }
 }
 
@@ -180,8 +153,6 @@
 }
 
 .header__title {
-  --font-title-size: var(--font-title-size-mobile);
-
   color: var(--header__title-color);
   text-shadow: 4px 4px 0px var(--header__title-shadow-color);
   font-family: var(--font-family);
@@ -189,29 +160,18 @@
   font-style: normal;
   font-weight: var(--bold);
   line-height: var(--title-line-height);
-
-  --title-margin: var(--mobile-title-margin);
-  margin: var(--title-margin);
   padding: 0;
 }
 
-@media (500px < width <= 896px) {
+@media (width > 500px) {
   .header__title {
-    --font-title-size: var(--font-title-size-desktop);
     font-size: var(--font-title-size);
-
-    --title-margin: var(--tablet-title-margin);
-    margin: var(--title-margin);
   }
 }
 
 @media (width > 896px) {
   .header__title {
-    --font-title-size: var(--font-title-size-desktop);
     font-size: var(--font-title-size);
-
-    --title-margin: var(--desktop-title-margin);
-    margin: var(--title-margin);
   }
 }
 
@@ -224,51 +184,23 @@
   font-weight: var(--bold);
   line-height: var(--line-height);
 
-  --subtitle-margin-block-end: var(--mobile-subtitle-margin-block-end);
-  margin-block-end: var(--subtitle-margin-block-end);
-
-  place-self: end;
+  place-self: center end;
   max-width: 364px;
-}
-
-@media (572px < width <= 896px) {
-  .header__subtitle {
-    --subtitle-margin-block-end: var(--tablet-subtitle-margin-block-end);
-  }
 }
 
 @media (width > 896px) {
   .header__subtitle {
-    --subtitle-margin-block-end: var(--desktop-subtitle-margin-block-end);
     max-width: 491px;
   }
 }
 
 .header__theme-menu {
-  place-self: end;
-
-  --theme-switcher-margin: var(--mobile-theme-switcher-margin);
-  margin: var(--theme-switcher-margin);
-}
-
-@media (572px < width <= 896px) {
-  .header__theme-menu {
-    --theme-switcher-margin: var(--tablet-theme-switcher-margin);
-    margin: var(--theme-switcher-margin);
-  }
+  place-self: center end;
 }
 
 @media (width > 896px) {
   .header__theme-menu {
-    --theme-switcher-margin: var(--desktop-theme-switcher-margin);
-    margin: var(--theme-switcher-margin);
-
-    position: absolute;
-
-    --page-padding: var(--general-padding);
-    top: var(--page-padding);
-    left: 50%;
-    transform: translateX(-50%);
+    place-self: start center;
   }
 }
 
@@ -312,20 +244,24 @@
   background: transparent;
   transition: border-color 0.5s;
 }
+.header__theme-menu-button_active,
+.header__theme-menu-button_active:hover {
+  pointer-events: none;
+}
 
 .header__theme-menu-button:hover {
   border: 1px solid var(--button-hover-color);
   transition: border-color 0.3s;
 }
 
+.header__theme-menu-button:focus {
+  outline: none;
+}
+
 .header__theme-menu-button:focus-visible {
   outline: none;
   border: 1px transparent solid;
   border-block-end: 1px solid var(--theme-switcher-color);
-}
-
-.header__theme-menu-button_active {
-  pointer-events: none;
 }
 
 /* content */
@@ -376,7 +312,12 @@
   border: 1px solid var(--content__link-hover-color);
 }
 
+.content__link-accent:focus {
+  outline: none;
+}
+
 .content__block {
+  list-style-type: none;
   padding: 0;
   margin: 0;
   height: fit-content;
@@ -391,60 +332,14 @@
   gap: 10px;
 }
 
-.content__section-a {
-  /* для мобилки */
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-
-  --page-padding: var(--mobile-padding);
-  padding: 0 var(--page-padding);
-
-  --margin-block-end: var(--mobile-decorated-zone-margin-block-end);
-  margin-block-end: calc(var(--page-padding) + var(--margin-block-end));
-}
-
-@media (width > 500px) {
-  .content__section-a {
-    --page-padding: var(--general-padding);
-    padding: 0 var(--page-padding);
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    --margin-block-end: var(--desktop-decorated-zone-margin-block-end);
-    margin-block-end: calc(var(--page-padding) + var(--margin-block-end));
-  }
-}
-
-.content__section-b {
-  /* для мобилки */
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-
-  --page-padding: var(--mobile-padding);
-  padding: 0 var(--page-padding);
-
-  --margin-block-end: var(--mobile-decorated-zone-margin-block-end);
-  margin-block-end: calc(var(--page-padding) + var(--margin-block-end));
-}
-
-.content__text-block-gallery-b {
+.content__text-block.content__concentration-reduction {
   display: grid;
   grid-template-rows: repeat(3, minmax(min-content, max-content));
   gap: 20px;
 }
 
-@media (width > 500px) {
-  .content__section-b {
-    --page-padding: var(--general-padding);
-    padding: 0 var(--page-padding);
-    --margin-block-end: var(--desktop-decorated-zone-margin-block-end);
-    margin-block-end: calc(var(--page-padding) + var(--margin-block-end));
-  }
-}
-
 @media (width > 896px) {
-  .content__text-block-gallery-b {
+  .content__text-block.content__concentration-reduction {
     display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: repeat(3, 1fr);
@@ -452,19 +347,50 @@
   }
 }
 
-#weird-length-joke {
+.content__section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  padding: 0 var(--page-padding);
+
+  margin-block-end: calc(
+    var(--page-padding) + var(--decorated-zone__margin-block-end)
+  );
+}
+
+@media (width > 500px) {
+  .content__section {
+    padding: 0 var(--page-padding);
+    margin-block-end: calc(
+      var(--page-padding) + var(--decorated-zone__margin-block-end)
+    );
+  }
+
+  .content__hard-to-concentrate {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .content__concentrate-better {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
+}
+
+.content__concentration-reduction-title {
   /* заголовок с какой-то специально странной длиной */ /* дефолтно для мобилки */
   width: 100%;
 }
 
-@media (500px < width <= 896px) {
-  #weird-length-joke {
+@media (width > 500px) {
+  .content__concentration-reduction-title {
     max-width: 236px;
   }
 }
 
 @media (width > 896px) {
-  #weird-length-joke {
+  .content__concentration-reduction-title {
     max-width: 315px;
   }
 }
@@ -475,7 +401,6 @@
 
 /* picture-gallety */
 .picture-gallery {
-  --page-padding: var(--mobile-padding);
   padding: 0 var(--page-padding);
 
   display: grid;
@@ -498,7 +423,6 @@
 
 @media (width > 500px) {
   .picture-gallery {
-    --page-padding: var(--general-padding);
     padding: 0 var(--page-padding);
   }
 
@@ -511,7 +435,6 @@
       "tape books ice-cream"
       "tape street street";
 
-    --page-padding: var(--general-padding);
     gap: var(--page-padding);
   }
 }
@@ -544,16 +467,15 @@
 
 /* footer */
 .footer {
-  --page-padding: var(--mobile-padding);
   padding: var(--page-padding);
   height: 100vh;
+  min-height: 668px;
   display: grid;
 
-  margin-block-start: var(--mobile-decorated-zone-margin-block-end);
+  margin-block-start: var(--decorated-zone__margin-block-end);
 }
 
 .footer__title {
-  --font-title-size: var(--font-title-size-mobile);
   color: var(--header__title-color);
   text-shadow: 4px 4px 0px var(--header__title-shadow-color);
   font-family: var(--font-family);
@@ -567,13 +489,11 @@
 
 @media (width > 500px) {
   footer {
-    --page-padding: var(--general-padding);
     padding: var(--page-padding);
-    margin-block-start: var(--desktop-decorated-zone-margin-block-end);
+    margin-block-start: var(--decorated-zone__margin-block-end);
   }
 
   .footer__title {
-    --font-title-size: var(--font-title-size-desktop);
     font-size: var(--font-title-size);
   }
 }
