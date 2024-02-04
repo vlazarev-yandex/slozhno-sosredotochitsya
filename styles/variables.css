@@ -2,3 +2,50 @@
   Переменные для вашего проекта
   и их переопределение под различные устройства
 */
+
+/* color-scheme theme:light */
+:root {
+  /* ---------------------------------------- */
+  /* general */
+  --font-family: "IBM Plex Mono", Arial, sans-serif;
+  --font-main-size: 18px;
+  --normal: 400;
+  --bold: 700;
+  --line-height: 23.4px; /* 130% */
+  --selector-line-height: 18px;
+  --title-line-height: 95.7px; /* 82.5% */
+
+  /* dark theme specifics */
+  --main-color-dark: #f1b2ce;
+  --background-color-dark: #000028;
+  --accent-color-dark: #ff0070;
+  --secondary-color-dark: #db00ff;
+  --background-image-dark: url("../images/cover-image-dark.png");
+  --easter-egg-background-dark: var(--accent-color-dark);
+  --easter-egg-font-dark: var(--accent-color-dark);
+  --button-hover-color-dark: rgba(255, 0, 112, 0.4);
+
+  /* light theme specifics */
+  --main-color-light: #353430;
+  --background-color-light: #fff1f7;
+  --accent-color-light: #ff8dcb;
+  --secondary-color-light: #ffc2e6;
+  --background-image-light: url("../images/cover-image-light.png");
+  --easter-egg-background-light: transparent;
+  --easter-egg-font-light: transparent;
+  --button-hover-color-light: rgba(50, 49, 45, 0.4);
+
+  /* mobile specifics */
+  --font-title-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  --page-padding: 10px;
+  --decorated-zone__margin-block-end: 40px;
+}
+
+@media (width >= 500px) {
+  /* desktop/tablet specifics */
+  :root {
+    --font-title-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    --page-padding: 20px;
+    --decorated-zone__margin-block-end: 60px;
+  }
+}
