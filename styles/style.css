@@ -124,6 +124,7 @@
 @media (width > 896px) {
   .header__subtitle {
     max-width: 491px;
+    margin-block-start: 17px;
   }
 }
 
@@ -275,7 +276,7 @@
 .content__section {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 10px;
 
   padding: 0 var(--page-padding);
 
@@ -310,6 +311,7 @@
 @media (width > 896px) {
   .content__concentration-reduction-title {
     max-width: 315px;
+    margin-block-end: 10px;
   }
 }
 
