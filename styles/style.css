@@ -5,7 +5,7 @@
   background: var(--background-image) center no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  z-index: -2;
+  z-index: 0;
 
   background-color: var(--background-color);
 }
@@ -21,7 +21,7 @@
   margin-block-end: var(--decorated-zone__margin-block-end);
   /* функция, которая даёт 80px при общестраничных паддингах=20px и 50px при общестраничных паддингах=10px */
 
-  z-index: 0;
+  z-index: 2;
 
   padding: var(--page-padding);
   position: relative;
@@ -120,7 +120,7 @@
   top: 0;
   left: -1px;
 
-  z-index: -1;
+  z-index: 1;
 }
 
 .header__block-start-inline-end-corner::before {
