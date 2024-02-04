@@ -19,7 +19,6 @@
   min-height: 668px;
 
   margin-block-end: var(--decorated-zone__margin-block-end);
-  /* функция, которая даёт 80px при общестраничных паддингах=20px и 50px при общестраничных паддингах=10px */
 
   z-index: 2;
 
@@ -87,70 +86,6 @@
   bottom: var(--page-padding);
 }
 
-@media (width > 500px) {
-  .decorated-zone {
-    padding: var(--page-padding);
-    margin-block-end: var(--decorated-zone__margin-block-end);
-  }
-}
-
-.header__block-start-inline-end-corner {
-  width: 25px;
-  height: 25px;
-
-  background: transparent;
-  border: 1px transparent;
-  border-block-start: 1px solid var(--decorate-border-color);
-  border-inline-end: 1px solid var(--decorate-border-color);
-
-  place-self: start end;
-
-  position: relative;
-}
-
-.header__block-start-inline-end-corner::after {
-  content: "";
-
-  background: var(--easter-egg-background) center no-repeat;
-  border: none;
-  width: 25px;
-  height: 25px;
-
-  position: absolute;
-  top: 0;
-  left: -1px;
-
-  z-index: 1;
-}
-
-.header__block-start-inline-end-corner::before {
-  content: "REC";
-  width: 33px;
-  height: 25px;
-
-  color: var(--easter-egg-font);
-  text-align: center;
-  font-family: var(--font-family);
-  font-size: var(--font-main-size);
-  font-style: normal;
-  font-weight: var(--normal);
-  line-height: 25px; /* 138.889% */
-
-  position: absolute;
-  top: 0;
-  left: -36px;
-}
-
-.header__block-end-inline-start-corner {
-  width: 25px;
-  height: 25px;
-  /* background: transparent; */
-  border-block-end: 1px solid var(--decorate-border-color);
-  border-inline-start: 1px solid var(--decorate-border-color);
-
-  place-self: end start;
-}
-
 .header__title {
   color: var(--header__title-color);
   text-shadow: 4px 4px 0px var(--header__title-shadow-color);
@@ -164,14 +99,7 @@
 
 @media (width > 500px) {
   .header__title {
-    font-size: var(--font-title-size);
     margin-inline-start: -20px;
-  }
-}
-
-@media (width > 896px) {
-  .header__title {
-    font-size: var(--font-title-size);
   }
 }
 
@@ -237,15 +165,12 @@
   cursor: pointer;
 }
 
-.header__theme-menu-button:active,
-.header__theme-menu-button_active,
-.header__theme-menu-button_active:hover {
+.header__theme-menu-button_active{
   border: 1px solid var(--button-active-color);
   background: transparent;
   transition: border-color 0.5s;
 }
-.header__theme-menu-button_active,
-.header__theme-menu-button_active:hover {
+.header__theme-menu-button_active {
   pointer-events: none;
 }
 
@@ -307,13 +232,13 @@
   border-block-end: 1px solid var(--content__link-hover-color);
 }
 
+.content__link-accent:focus {
+  outline: none;
+}
+
 .content__link-accent:focus-visible {
   outline: none;
   border: 1px solid var(--content__link-hover-color);
-}
-
-.content__link-accent:focus {
-  outline: none;
 }
 
 .content__block {
@@ -339,10 +264,8 @@
 
 @media (width > 896px) {
   .content__text-block.content__concentration-reduction {
-    display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
   }
 }
 
@@ -359,13 +282,6 @@
 }
 
 @media (width > 500px) {
-  .content__section {
-    padding: 0 var(--page-padding);
-    margin-block-end: calc(
-      var(--page-padding) + var(--decorated-zone__margin-block-end)
-    );
-  }
-
   .content__hard-to-concentrate {
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -433,8 +349,6 @@
       "sunset sunset ice-cream"
       "tape books ice-cream"
       "tape street street";
-
-    gap: var(--page-padding);
   }
 }
 
@@ -488,17 +402,6 @@
   line-height: var(--title-line-height);
 
   place-self: center center;
-}
-
-@media (width > 500px) {
-  footer {
-    padding: var(--page-padding);
-    margin-block-start: var(--decorated-zone__margin-block-end);
-  }
-
-  .footer__title {
-    font-size: var(--font-title-size);
-  }
 }
 
 .footer::before {
