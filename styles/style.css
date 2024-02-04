@@ -26,7 +26,7 @@
   position: relative;
 }
 
-.header__REC-easter-egg {
+.header__easter-egg {
   position: absolute;
   top: var(--page-padding);
   right: var(--page-padding);
@@ -36,7 +36,7 @@
   display: flex;
 }
 
-.header__REC-easter-egg::before {
+.header__easter-egg::before {
   content: "rec";
 
   color: var(--easter-egg-font);
@@ -49,11 +49,16 @@
   align-self: center;
 }
 
-.header__REC-svg {
-  height: 25px;
-  width: 25px;
+.header__easter-egg-circle {
+  height: 9px;
+  width: 9px;
+  margin: 8px 8px 8px 10px;
+
+  background-color: var(--easter-egg-background);
+  box-shadow:0px 0px 4px 2px var(--easter-egg-background);
+  border-radius: 50%;
   align-self: center;
-  transform: scale(var(--easter-egg-visible));
+
 }
 
 .decorated-zone::before {

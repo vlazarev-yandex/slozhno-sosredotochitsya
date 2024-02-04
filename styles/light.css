@@ -81,7 +81,6 @@
     /* REC */
     --easter-egg-background: var(--easter-egg-background-light);
     --easter-egg-font: transparent;
-    --easter-egg-visible: 0;
 
     /* content */
     --content__title-color: var(--main-color);

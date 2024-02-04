@@ -21,7 +21,8 @@
   --accent-color-dark: #ff0070;
   --secondary-color-dark: #db00ff;
   --background-image-dark: url("../images/cover-image-dark.png");
-  --easter-egg-background-dark: url("../images/Ellipse\ 4.png");
+  --easter-egg-background-dark: var(--accent-color-dark);
+  --easter-egg-font-dark: var(--accent-color-dark);
   --button-hover-color-dark: rgba(255, 0, 112, 0.4);
 
   /* light theme specifics */
@@ -31,6 +32,7 @@
   --secondary-color-light: #ffc2e6;
   --background-image-light: url("../images/cover-image-light.png");
   --easter-egg-background-light: transparent;
+  --easter-egg-font-light: transparent;
   --button-hover-color-light: rgba(50, 49, 45, 0.4);
 
   /* mobile specifics */
