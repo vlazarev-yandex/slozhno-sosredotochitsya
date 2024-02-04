@@ -51,7 +51,7 @@
 }
 
 @media (prefers-color-scheme: light) {
-  .page.theme_auto {
+  :root {
     /* general */
     --background-color: var(--background-color-light);
     --background-image: var(--background-image-light);
