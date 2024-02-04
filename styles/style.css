@@ -165,6 +165,7 @@
 @media (width > 500px) {
   .header__title {
     font-size: var(--font-title-size);
+    margin-inline-start: -20px;
   }
 }
 
